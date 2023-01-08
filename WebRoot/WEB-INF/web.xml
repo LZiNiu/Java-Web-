@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app version="2.4"
+	NS1:schemaLocation="http://java.sun.com/xml/ns/j2ee &#xA; http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance">
+	<servlet>
+		<servlet-name>ApplicationControllerServlet</servlet-name>
+		<servlet-class>controller.ApplicationControllerServlet</servlet-class>
+		<init-param>           
+			<param-name>jdbcDriver</param-name>
+		           
+			<!-- <param-value>com.mysql.jdbc.Driver</param-value> --> 
+		
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbURL</param-name>  
+			          
+			<param-value>jdbc:mysql://localhost:3306/javaCourse</param-value> 
+			
+			<!-- <param-value>jdbc:derby://localhost:1527/javaCourse;create=true</param-value>--> 
+		</init-param>
+		<init-param>           
+			<param-name>dbUser</param-name>           
+			<param-value>root</param-value>  
+		</init-param>
+		<init-param>           
+			<param-name>dbPassword</param-name>           
+			<param-value>123456</param-value>
+		</init-param>		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApplicationControllerServlet</servlet-name>
+		<url-pattern>/ApplicationController</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>portal.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
