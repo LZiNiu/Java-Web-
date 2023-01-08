@@ -7,9 +7,14 @@
 # BlueJ files
 *.ctxt
 
+*.iml
 *.idea/
 out/
 META-INF/
+
+/WebRoot/WEB-INF/classes
+/src/dataAccess
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
